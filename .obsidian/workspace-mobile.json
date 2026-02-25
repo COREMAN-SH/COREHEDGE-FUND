@@ -27,13 +27,14 @@
             "id": "7f91188b14264f17",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "Untitled.base",
-                "viewName": "Table"
+                "file": "bitcoin Trading.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-table",
-              "title": "Untitled"
+              "icon": "lucide-file",
+              "title": "bitcoin Trading"
             }
           }
         ],
@@ -197,8 +198,8 @@
   },
   "active": "7f91188b14264f17",
   "lastOpenFiles": [
-    "bitcoin Trading.md",
     "Untitled.base",
+    "bitcoin Trading.md",
     "README.md",
     "git push.md"
   ]
