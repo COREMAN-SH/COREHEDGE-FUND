@@ -119,17 +119,50 @@ ChatGPT는 **로컬 폴더에 접근하지 못한다.** GitHub 리포를 통해�
 
 ---
 
-## 4. 모바일 (iOS / Android)
+## 4. 모바일 (iOS — iPhone / iPad)
 
-1. Obsidian 모바일 앱 설치
-2. 볼트를 새로 만들고 Git 플러그인 활성화 → 리포 clone
-3. 인증은 PAT 사용 (데스크톱과 동일 토큰 재사용 가능)
+### 4-1. 읽기만 하면 되는 경우
+GitHub 앱 또는 모바일 브라우저에서 리포를 열면 마크다운이 그대로 렌더링된다. **설정 불필요.**
 
-**주의**
-- 모바일은 데스크톱보다 git 동작이 느리고 불안정하다. 큰 커밋은 데스크톱에서 처리할 것
-- 모바일에서 편집한 뒤에는 **반드시 sync 버튼을 눌러 push** 하고, 데스크톱에서는 작업 전에 pull부터 할 것
+### 4-2. Obsidian 앱에서 보고 편집하려는 경우
 
----
+iOS에서는 obsidian-git 플러그인이 불안정하다. **Working Copy(iOS git 클라이언트) + Obsidian** 조합이 사실상 표준이다.
+
+> ⚠️ Working Copy는 **Pro 일회성 결제**가 필요하다(push 기능). Apple ID가 같으면 다른 기기에서 구입한 것을 복원할 수 있다.
+
+**절차**
+
+1. **Obsidian iOS 설치** → 볼트를 `On My iPhone`(또는 `On My iPad`) 저장소에 새로 만든다. 이름: `CoreHedgeFund`
+   - iCloud가 아니라 **로컬 저장소**여야 한다. Working Copy가 접근할 수 있어야 하기 때문
+2. **Working Copy 설치** (App Store) → Pro 구매/복원
+3. Working Copy → **Repositories → + → Clone repository**
+   - URL: `https://github.com/COREMAN-SH/COREHEDGE-FUND.git`
+   - 인증: GitHub 로그인 또는 **PAT**(2-2에서 만든 토큰 재사용 가능)
+4. clone된 리포를 열고 → **공유 아이콘(↑)** → **`Link Repository to Folder`** (iPhone에서는 `Link Repository to Directory`)
+5. 파일 브라우저에서 `On My iPhone` → `Obsidian` → `CoreHedgeFund` 선택 → **Done**
+6. 이제 Working Copy 리포와 Obsidian 볼트가 같은 폴더를 가리킨다
+
+**사용 흐름**
+- 읽기 전: Working Copy에서 **Pull**
+- 편집 후: Working Copy에서 **Commit → Push**
+- Obsidian 안에서는 git 조작을 하지 않는다 (플러그인 불필요)
+
+**자동화(선택)**: Apple 단축어(Shortcuts)가 Working Copy 액션을 지원한다. "앱 열 때 pull / 닫을 때 commit-push" 단축어를 만들어두면 수동 조작을 줄일 수 있다.
+
+### 4-3. Android
+obsidian-git 플러그인이 비교적 잘 동작한다.
+1. Obsidian 앱 → 빈 볼트 생성
+2. 설정 → 커뮤니티 플러그인 → **제한 모드 해제** → Browse → **`Git`**(제작자 Vinzent) 설치·활성화
+3. 명령 팔레트 → `Git: Clone an existing remote repo` → URL 입력 → **PAT**로 인증
+
+### 4-4. 모바일 git 공통 제약
+- **SSH 인증 불가** — PAT(토큰) 방식만 가능
+- **rebase 전략 미지원** — 모바일에서는 merge 전략으로 설정할 것. 데스크톱의 `pull --rebase`가 그대로 안 먹힌다
+- 리포 크기 제약 — 파일 스캔이 느리다(3,000개 기준 3~4분). 이 볼트는 26개 파일이라 무관
+- 큰 변경·충돌 해소는 데스크톱에서 처리할 것
+
+### 4-5. 참고
+`.obsidian/plugins/obsidian-git/`이 리포에 포함돼 있으므로, 볼트를 기기에 가져오기만 하면 플러그인 파일은 함께 따라온다. 안드로이드에서 처음 clone할 때만 별도 설치가 필요하다.
 
 ## 5. 운영 규칙 (중요)
 
