@@ -1,0 +1,6 @@
+# 모든 텍스트 파일의 줄바꿈을 저장소에서는 LF로 통일
+# (Windows 체크아웃 시 CRLF로 자동 변환 → Win/Mac 혼용 시 diff 오염 방지)
+* text=auto eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.csv text eol=lf
