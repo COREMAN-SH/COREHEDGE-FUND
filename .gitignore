@@ -1,0 +1,13 @@
+# Obsidian 워크스페이스 상태 (기기별로 달라져 매번 diff가 발생)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/graph.json
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 임시 파일
+*.tmp
+~$*
