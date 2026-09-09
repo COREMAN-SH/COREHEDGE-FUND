@@ -7,8 +7,8 @@
 
 | 문서 | 내용 | 분량 |
 |---|---|---|
-| [[indicator-glossary]] | **기술적 지표 사전 55종** — 정의·계산식·판정규칙·함정 + 이론 심화 | 2,571줄 |
-| [[../onchain/metrics-glossary\|온체인 지표 사전]] | 온체인 전용 (가치평가·보유자행동·활동·유동성·앱레벨) | 411줄 |
+| [[indicator-glossary]] | **기술적 지표 사전 47종 (A~F)** — 추세·모멘텀·변동성·거래량·가격레벨·크립토파생. 정의·계산식·판정규칙·함정 + 이론 심화 | 2,247줄 |
+| [[../onchain/metrics-glossary\|온체인 지표 사전]] | **온체인 단일 원천** — 가치평가·보유자행동·활동·유동성·앱레벨 + 이론 심화. 구 G축 8종 흡수 | 780줄 |
 | [[financial-statements-guide]] | 재무제표 완전정복 — TradingView Financials 탭 읽는 법. 공식 헬프센터 약 380편 전수 조사 반영 | 551줄 |
 | [[us-sector-classification-guide]] | 미국 주식 섹터 분류 (GICS · ICB · 나스닥100) | 222줄 |
 | [[els-complete-guide]] | ELS 종합 매뉴얼 | 86줄 |
